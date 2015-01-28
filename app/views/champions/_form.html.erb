@@ -1,0 +1,66 @@
+<%= form_for @champion, :html => { :class => "form-horizontal champion" } do |f| %>
+
+    <% if @champion.errors.any? %>
+    <div id="error_expl" class="panel panel-danger">
+      <div class="panel-heading">
+        <h3 class="panel-title"><%= pluralize(@champion.errors.count, "error") %> prohibited this champion from being saved:</h3>
+      </div>
+      <div class="panel-body">
+        <ul>
+        <% @champion.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="control-group">
+    <%= f.label :key, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :key, :class => 'form-control' %>
+    </div>
+    <%= error_span(@champion[:key]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :name, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :name, :class => 'form-control' %>
+    </div>
+    <%= error_span(@champion[:name]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :title, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :title, :class => 'form-control' %>
+    </div>
+    <%= error_span(@champion[:title]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :partype, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :partype, :class => 'form-control' %>
+    </div>
+    <%= error_span(@champion[:partype]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :lore, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lore, :class => 'form-control' %>
+    </div>
+    <%= error_span(@champion[:lore]) %>
+  </div>
+  <div class="control-group">
+    <%= f.label :blurb, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :blurb, :class => 'form-control' %>
+    </div>
+    <%= error_span(@champion[:blurb]) %>
+  </div>
+
+
+  <%= f.submit nil, :class => 'btn btn-primary' %>
+  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+            champions_path, :class => 'btn btn-default' %>
+
+<% end %>

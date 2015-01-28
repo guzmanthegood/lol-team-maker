@@ -6,6 +6,10 @@ gem 'rails', '4.1.6'
 gem 'rails-i18n'
 gem 'mail'
 
+# api
+gem 'faraday', '~> 0.9.1'
+gem 'faraday_middleware', '~> 0.9.1'
+
 gem 'turbolinks'
 gem 'sass-rails', '~> 4.0.3'
 gem 'coffee-rails', '~> 4.0.0'
