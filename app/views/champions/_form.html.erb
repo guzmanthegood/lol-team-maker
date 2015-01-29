@@ -46,21 +46,21 @@
   <div class="control-group">
     <%= f.label :lore, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :lore, :class => 'form-control' %>
+      <%= f.text_area :lore, :class => 'form-control' %>
     </div>
     <%= error_span(@champion[:lore]) %>
   </div>
   <div class="control-group">
     <%= f.label :blurb, :class => 'control-label' %>
     <div class="controls">
-      <%= f.text_field :blurb, :class => 'form-control' %>
+      <%= f.text_area :blurb, :class => 'form-control' %>
     </div>
     <%= error_span(@champion[:blurb]) %>
   </div>
 
-
-  <%= f.submit nil, :class => 'btn btn-primary' %>
-  <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
-            champions_path, :class => 'btn btn-default' %>
+  <div class="control-group control-panel">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")), champions_path, :class => 'btn btn-default' %>
+  </div>
 
 <% end %>

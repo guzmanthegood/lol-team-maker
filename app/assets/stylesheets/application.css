@@ -13,3 +13,10 @@
  *= require twitter-bootstrap-static/bootstrap
  *= require_directory .
  */
+footer{
+	margin-top: 35px
+}
+
+.control-panel{
+	margin-top: 20px
+}
